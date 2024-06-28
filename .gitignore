@@ -1,1 +1,5 @@
 .venv
+data/public_bike/공공자전거 대여소 정보(23.06월 기준).csv
+data/public_bike/서울특별시 공공자전거 대여정보_201906_1.csv
+data/public_bike/서울특별시 공공자전거 대여정보_201906_2.csv
+data/public_bike/서울특별시 공공자전거 대여정보_201906_3.csv
