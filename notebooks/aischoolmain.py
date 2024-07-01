@@ -1,5 +1,7 @@
 import streamlit as st
 from crawling import finance_naver
+from public_bike import bikes_da
+from meteor_shower import meteor_shower
 
 
 # 사이드바 화면
@@ -20,10 +22,12 @@ if user_password == '1234':
     
     elif menu == '따릉이':
         st.subheader('따릉이 데이터분석 >>>>>>>>>')
+        bikes_da.bikes_da()
         
     elif menu == '유성우':
         st.subheader('유성우 데이터 분석 >>>>>>>>>')
+        meteor_shower.meteor_main()
         
     else:
-        st.subheader('?의 페이지에 오신 것을 환영합니다.')
+        st.subheader('?의 페이지:100:에 오신 것을 환영합니다.')
 
