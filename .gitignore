@@ -4,3 +4,5 @@ data/public_bike/서울특별시 공공자전거 대여정보_201906_1.csv
 data/public_bike/서울특별시 공공자전거 대여정보_201906_2.csv
 data/public_bike/서울특별시 공공자전거 대여정보_201906_3.csv
 data/서울시_반려견_놀이터.xlsx
+data/public_bike/Seoul_Gu.json
+notebooks/public_bike/__pycache__
