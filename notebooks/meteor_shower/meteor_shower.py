@@ -1,8 +1,7 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 
-def meteor():
+def preprocessing_meteor():
     # 데이터셋 불러오기
     path = '../data/' # 공통 경로
     meteor_showers = pd.read_csv(path + 'meteorshowers.csv')
@@ -24,7 +23,8 @@ def meteor():
     # 다른 df도 변환
     moon_phases['month'] = moon_phases['month'].map(months)
     constellations['bestmonth'] = constellations['bestmonth'].map(months)
-    
+
+    # startdate 컬럼 추가    
     meteor_showers['startdate'] = pd.to_datetime(2020 * 10000 + 
                                             meteor_showers['startmonth'] * 100 + 
                                             meteor_showers['startday'],
@@ -36,11 +36,13 @@ def meteor():
                                                 meteor_showers['endday'],
                                                 format = '%Y%m%d')
     
+    # date 컬럼 추가
     moon_phases['date'] = pd.to_datetime(2020 * 10000 + 
                                                 moon_phases['month'] * 100 + 
                                                 moon_phases['day'],
                                                 format = '%Y%m%d')
     
+    # 달의 위상 백분율로 바꾸기
     phases = {'new moon' : 0, 'first quarter' : 0.5, 'third quarter' : 0.5, 'full moon' : 1}
     moon_phases['percentage'] = moon_phases['moonphase'].map(phases)
     
@@ -61,7 +63,8 @@ def meteor():
     
 # 도시명을 입력히면 위도를 반환하는 함수
 def predict_best_meteor_shower_viewing(city):
-    meteor_showers,moon_phases,constellations,cities = [meteor()[i] for i in range(4)]
+    # 전처리가 끝난 데이터 불러오기
+    meteor_showers,moon_phases,constellations,cities = [preprocessing_meteor()[i] for i in range(4)]
     # 안내 메시지 초기화
     meteor_shower_string = ''
 
