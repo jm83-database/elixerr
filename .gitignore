@@ -9,3 +9,5 @@ notebooks/public_bike/__pycache__
 data/sklearn_classification/creditcard.csv
 notebooks/DL
 notebooks/DL_master_20240707
+notebooks/PyTorch_excersize-moonrock/data
+notebooks/PyTorch_excersize-moonrock
