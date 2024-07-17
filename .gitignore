@@ -12,3 +12,5 @@ notebooks/DL
 notebooks/DL_master_20240707
 notebooks/PyTorch_excersize-moonrock/data
 notebooks/PyTorch_excersize-moonrock
+notebooks/deploy/iris_deploy.ipynb
+notebooks/deploy/iris_deploy.py
