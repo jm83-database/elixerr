@@ -7,6 +7,7 @@ data/서울시_반려견_놀이터.xlsx
 data/public_bike/Seoul_Gu.json
 notebooks/public_bike/__pycache__
 data/sklearn_classification/creditcard.csv
+data/custom_vision
 notebooks/DL
 notebooks/DL_master_20240707
 notebooks/PyTorch_excersize-moonrock/data
